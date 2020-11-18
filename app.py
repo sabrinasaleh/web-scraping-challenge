@@ -5,7 +5,7 @@ import os
 
 app = Flask(__name__)
 
-mongo = PyMongo(app, uri="mongodb+srv://mongo_user:8Z20sQQ31JANA1FW@cluster0.p3kvz.mongodb.net/mars?retryWrites=true&w=majority")
+mongo = PyMongo(app, uri)
 
 @app.route("/")
 def index():
