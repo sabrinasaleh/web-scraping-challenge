@@ -41,8 +41,6 @@ Use MongoDB with Flask templating to create a new HTML page that displays all of
 
 ![screen_1](ScreenShots/screen_1.png)
 ![screen_2](ScreenShots/screen_2.PNG)
-![screen_3](ScreenShots/screen_3.PNG)
-![screen_4](ScreenShots/screen_4.PNG)
 
 ## Technologies used for the assignment:
 * Python
