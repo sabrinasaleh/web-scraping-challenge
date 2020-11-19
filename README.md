@@ -11,26 +11,26 @@ Complete your initial scraping using Jupyter Notebook, BeautifulSoup, Pandas, an
 ### NASA Mars News
 
 Scrape the [NASA Mars News Site](https://mars.nasa.gov/news/) and collect the latest News Title and Paragraph Text. Assign the text to variables that you can reference later.
-* The python file has generated following outcome for scraping the news_title and news_paragraph.
+* Similar to the "mission_to_mars.ipynb", the python file "mission_to_mars.py" has generated following outcome for scraping the news_title and news_paragraph.
 ![news_mars](ScreenShots/news_py.PNG)
 
 ### JPL Mars Space Images - Featured Image
 
 Visit the url for JPL Featured Space Image [here](https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars). Use splinter to navigate the site and find the image url for the current Featured Mars Image and assign the url string to a variable called `featured_image_url`. Make sure to find the image url to the full size `.jpg` image. Make sure to save a complete url string for this image.
-* The python file has generated following outcome for scraping the featured_image_url.
+* Similar to the "mission_to_mars.ipynb", the python file "mission_to_mars.py" has generated following outcome for scraping the featured_image_url.
 ![image_mars](ScreenShots/image_py.PNG)
 
 ### Mars Facts
 
 Visit the Mars Facts webpage [here](https://space-facts.com/mars/) and use Pandas to scrape the table containing facts about the planet including Diameter, Mass, etc. Use Pandas to convert the data to a HTML table string.
-* The python file has generated following outcome for scraping the HTML table string.
+* Similar to the "mission_to_mars.ipynb", the python file "mission_to_mars.py" has generated following outcome for scraping the HTML table string.
 
     ![facts_mars](ScreenShots/pandas_html_py.PNG)
 
 ### Mars Hemispheres
 
 Visit the USGS Astrogeology site [here](https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars) to obtain high resolution images for each of Mar's hemispheres. You will need to click each of the links to the hemispheres in order to find the image url to the full resolution image. Save both the image url string for the full resolution hemisphere image, and the Hemisphere title containing the hemisphere name. Use a Python dictionary to store the data using the keys `img_url` and `title`. Append the dictionary with the image url string and the hemisphere title to a list. This list will contain one dictionary for each hemisphere.
-* The python file has generated following outcome for scraping the dictionary of hemisphere_image_urls.
+* Similar to the "mission_to_mars.ipynb", the python file "mission_to_mars.py" has generated following outcome for scraping the dictionary of hemisphere_image_urls.
 ![hemisphere_mars](ScreenShots/hemisphere_dict_py.PNG)
 
 ## Step 2 - MongoDB and Flask Application
@@ -51,6 +51,7 @@ Use MongoDB with Flask templating to create a new HTML page that displays all of
 * BeautifulSoup
 * Splinter
 * HTML
+* Jinja
 * Flask
 * PyMongo
 * MongoDB
