@@ -15,8 +15,8 @@ html_news = browser.html
 soup = BeautifulSoup(html_news, "html.parser")
 # Retrieve the latest element that contains news title and news_paragraph
 news = soup.find("li", class_="slide")
-news_title = news.find("div", class_="content_title").text
-news_p = news.find("div", class_="article_teaser_body").text
+news_title = news.find("div", class_="content_title").get_text
+news_p = news.find("div", class_="article_teaser_body").get_text
 # Display scrapped data for news_title and news_p 
 print(news_title)
 print(news_p)
