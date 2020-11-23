@@ -9,39 +9,21 @@ executable_path = {"executable_path": "chromedriver.exe"}
 browser = Browser("chrome", **executable_path, headless=False)
 
 
-# Defining scrape & dictionary
+# Defining scrape
 def scrape():
-    final_data = {}
-    output = marsNews()
-    final_data["mars_news"] = output[0]
-    final_data["mars_paragraph"] = output[1]
-    final_data["mars_image"] = marsImage()
-    final_data["mars_facts"] = marsFacts()
-    final_data["mars_hemisphere"] = marsHem()
-
-    return final_data
-
-time.sleep(2)
-
-
-NASA Mars News
-def marsNews():
+    # NASA Mars News
     news_url = "https://mars.nasa.gov/news/"
     browser.visit(news_url)
     html_news = browser.html
     soup = BeautifulSoup(html_news, "html.parser")
     news = soup.find("li", class_="slide")
-    news_title = news.find("div", class_="content_title").text
-    news_p = news.find("div", class_="article_teaser_body").text
-    output = [news_title, news_p]
-
-    return output  
-
-time.sleep(2)
+    news_title = news.find("div", class_="content_title").get_text
+    news_p = news.find("div", class_="article_teaser_body").get_text
+    
+    time.sleep(1)
 
 
-# JPL Mars Space Images - Featured Image
-def marsImage():
+     # JPL Mars Space Images - Featured Image
     image_url = "https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars"
     browser.visit(image_url)
     browser.click_link_by_id("full_image")
@@ -52,13 +34,10 @@ def marsImage():
     image_url = image.select_one("a").get("href")
     featured_image_url = "https://www.jpl.nasa.gov"+ image_url 
 
-    return featured_image_url
+    time.sleep(1)
+    
 
-time.sleep(2) 
-
-
-# Mars Facts
-def marsFacts():
+    # Mars Facts
     facts_url = "https://space-facts.com/mars/"
     browser.visit(facts_url)
     mars_data = pd.read_html(facts_url)
@@ -67,14 +46,10 @@ def marsFacts():
     mars_data = mars_data.set_index("Description")
     mars_facts = mars_data.to_html(index = True, header =True)
 
-    return mars_facts
-
-time.sleep(2)
+    time.sleep(1)
 
 
-# Mars Hemispheres
-def marsHem():
-    import time 
+    # Mars Hemispheres 
     hemispheres_url = "https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars"
     browser.visit(hemispheres_url)
     html_hem = browser.html
@@ -98,6 +73,18 @@ def marsHem():
         dictionary = {"title": title, "img_url": image_url}
         mars_hemisphere.append(dictionary)
 
-        return mars_hemisphere
-        
-time.sleep(2)
+        time.sleep(1)
+
+
+# Defining dictionary
+    mars_dict = {
+        "mars_news": news_title,
+        "mars_paragraph": news_p,
+        "mars_image": featured_image_url, 
+        "mars_facts": mars_facts,
+        "mars_hemisphere": mars_hemisphere,
+    } 
+    
+
+    return mars_dict
+
