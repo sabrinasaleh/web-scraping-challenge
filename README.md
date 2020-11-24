@@ -37,15 +37,23 @@ Visit the USGS Astrogeology site [here](https://astrogeology.usgs.gov/search/res
 
 Use MongoDB with Flask templating to create a new HTML page that displays all of the information that was scraped from the URLs above. Start by converting your Python file into a Python script called `scrape_mars.py` with a function called `scrape` that will execute all of your scraping code from above and return one Python dictionary containing all of the scraped data. Next, create a route called `/scrape` that will import your `scrape_mars.py` script and call your `scrape` function. Store the return value in Mongo as a Python dictionary. Create a root route `/` that will query your Mongo database and pass the mars data into an HTML template to display the data. Create a template HTML file called `index.html` that will take the mars data dictionary and display all of the data in the appropriate HTML elements. 
 * The required files - `scrape_mars.py` with `scrape` function, `index.html` with appropriate HTML elements, and `app.py` with MongoDB & Flask - are added for the assignment.
-* Screen-shots of the final application are provided below.
+* **Screen-shots of the final application are provided below**
 
 ![screen_1](ScreenShots/screen_1.png)
 
+* **Screen-shot of news_title & news_paragraph, mars_facts, and featured_image**
+
 ![screen_2](ScreenShots/sabrina_screen2.PNG)
+
+* **Screen-shot of news_title, news_paragraph, mars_facts, and featured_image**
 
 ![screen_3](ScreenShots/sabrina_screen3.PNG)
 
+* **Screen-shot of mars_heminspheres: Cerberus Hemisphere & Schiaparelli Hemisphere**
+
 ![screen_4](ScreenShots/sabrina_screen4.PNG)
+
+* **Screen-shot of mars_heminspheres: Syrtis Hemisphere & Valles Marinerir Hemisphere**
 
 ![screen_5](ScreenShots/sabrina_screen5.PNG)
 
