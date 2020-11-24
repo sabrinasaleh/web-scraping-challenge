@@ -41,19 +41,19 @@ Use MongoDB with Flask templating to create a new HTML page that displays all of
 
 ![screen_1](ScreenShots/screen_1.png)
 
-* **Screen-shot of news title & news paragraph**
+* **Screen-shot of News Title & News Paragraph**
 
 ![screen_2](ScreenShots/sabrina_screen2.PNG)
 
-* **Screen-shot of news title, news paragraph, mars facts, and featured image**
+* **Screen-shot of News Title, News Paragraph, Mars Facts, and Featured Image**
 
 ![screen_3](ScreenShots/sabrina_screen3.png)
 
-* **Screen-shot of mars heminspheres: Cerberus Hemisphere & Schiaparelli Hemisphere**
+* **Screen-shot of Mars Heminspheres: Cerberus Hemisphere & Schiaparelli Hemisphere**
 
 ![screen_4](ScreenShots/sabrina_screen4.PNG)
 
-* **Screen-shot of mars heminspheres: Syrtis Hemisphere & Valles Marinerir Hemisphere**
+* **Screen-shot of Mars Heminspheres: Syrtis Hemisphere & Valles Marinerir Hemisphere**
 
 ![screen_5](ScreenShots/sabrina_screen5.PNG)
 
